@@ -3,10 +3,10 @@ const request = require('supertest');
 
 const {app} = require('./../server');
 const {Todo} = require('./../models/todo');
-
+//Asyncronous function needs done to be called to escape the function
 beforeEach((done) => {
   Todo.remove({}).then(() => done());
-});
+}); //using es6 expression syntax
 
 describe('POST /todos', () => {
   it('Should create a new todo', (done) => {
@@ -16,7 +16,7 @@ describe('POST /todos', () => {
       .post('/todos')
       .send({text})
       .expect(200)
-      .expect((res) => {
+      .expect((res) => { //custom expect insertion
         expect(res.body.text).toBe(text);
       })
       .end((err, res) => {
@@ -39,7 +39,7 @@ describe('POST /todos', () => {
       .expect(400)
 
       .end((err, res) => {
-        if (err) {
+        if (err) { //return stops function execution
           return done(err);
         }
 
