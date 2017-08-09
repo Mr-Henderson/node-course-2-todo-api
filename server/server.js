@@ -1,6 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-
+//connect to db with --> james@james-Satellite-P775:~/mongo/bin$ ./mongod --dbpath ~/mongo-data
 var {mongoose} = require('./db/mongoose');
 var {Todo} = require('./models/todo');
 var {User} = require('./models/user');
