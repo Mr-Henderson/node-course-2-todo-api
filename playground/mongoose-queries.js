@@ -4,31 +4,31 @@ const {mongoose} = require('./../server/db/mongoose');
 const {Todo} = require('./../server/models/todo');
 const {User} = require('./../server/models/user');
 
-var id = '598a6c985e3725bc3a1ddc47';
+var id = '598d9d3414a33e4384946587';
 
-//if (!ObjectID.isValid(id)) {
-//  console.log('ID not valid');
-//}
-//Todo.find({
+if (!ObjectID.isValid(id)) {
+ console.log('ID not valid');
+}
+// Todo.find({
 //  _id: id
-//}).then((todos) => {
+// }).then((todos) => {
 //  console.log('Todos', todos);
-//});
+// });
 //
-//Todo.findOne({
+// Todo.findOne({
 //  _id: id
-//}).then((todo) => {
+// }).then((todo) => {
 //  console.log('Todo', todo);
-//});
+// });
 
-//Todo.findById(id).then((todo) => {
+// Todo.findById(id).then((todo) => {
 //  if (!todo) {
 //    return console.log('Id not found');
 //  }
 //  console.log('Todo By Id', todo);
-//}).catch((e) => console.log(e));
+// }).catch((e) => console.log(e));
 
-User.findById('598a6c985e3725bc3a1ddc47').then((user) => {
+User.findById('598b30b4106daa11da7fb92c').then((user) => {
   if (!user) {
     return console.log('Unable to find user');
   }
